@@ -13,7 +13,13 @@ var About = React.createClass({
 */
 
 //stateless component
-var About = (props) =>  <h1>This is the About app</h1>
+var About = (props) =>  {
+  return(
+    <div>
+    <h1> Welcome to the about page</h1>
+    <p> This is the about section </p>
+  </div>
+)}
 
 
 module.exports = About;

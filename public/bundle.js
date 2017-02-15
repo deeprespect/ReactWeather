@@ -26591,11 +26591,20 @@
 
 	//stateless component
 	var About = function About(props) {
-	    return React.createElement(
-	        'h1',
-	        null,
-	        'This is the About app'
-	    );
+	  return React.createElement(
+	    'div',
+	    null,
+	    React.createElement(
+	      'h1',
+	      null,
+	      ' Welcome to the about page'
+	    ),
+	    React.createElement(
+	      'p',
+	      null,
+	      ' This is the about section '
+	    )
+	  );
 	};
 
 	module.exports = About;

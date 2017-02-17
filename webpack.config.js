@@ -1,6 +1,26 @@
+var webpack = require('webpack');
+
 module.exports =
 {
-  entry: "./app/app.jsx",
+  entry:
+  [
+    'script!foundation-sites/dist/foundation.min.js',
+    './app/app.jsx'
+  ],
+
+
+  externals:
+  {
+    jquery: 'jQuery'
+  },
+
+   plugins:
+   [
+     new webpack.ProvidePlugin({
+      '$': 'jquery',
+      'jQuery': 'jquery'
+     })
+   ],
 
   output:
   {
@@ -30,7 +50,7 @@ module.exports =
   module:
   {
     loaders: [{
-                loader:'babel-loader',
+                loader:'babel',
                 query:
                 {
                   presets: ['react', 'es2015']
